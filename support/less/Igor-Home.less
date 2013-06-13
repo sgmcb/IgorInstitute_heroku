@@ -1,0 +1,111 @@
+/*!
+ * Igor-Home.less
+ *
+ * Igor Institute Homepage LESS Stylesheet
+ * Built on Bootstrap v3.0.0 (2013-06-05)
+ *
+ */
+ 
+// Variables
+@import "Igor-Variables.less";
+ 
+   
+// Set the bar and dropdown button to white
+.ii_hdr-bar {
+  background-color:@white;
+  height:4px;
+}
+
+.ii_pg-content {
+  margin-top:75px;
+}
+
+.ii_banner-wrapper {
+  margin-bottom:30px;
+
+  .ii_banner-logo {
+   //height:5em;
+  }
+  
+  .ii_banner-vert-logo {
+    //height:5em;
+  }  
+
+}
+
+// INFO!
+.ii_info-wrapper {
+  // Add left padding with horz logo
+  @media (min-width: 768px) {padding-left:95px;}
+
+
+  .ii_banner-tagline {
+    margin-bottom:30px;
+    font-weight:100;
+    color:@white;
+  }
+
+  // Contact
+  .ii_contact-point {
+    text-align:center;
+    color:@black;
+    font-weight:900;
+    
+    
+    // Icon
+    @icon-width:2em;
+    .ii_contact-icon {
+      height:@icon-width - .5em;
+      line-height:1em;
+      padding-top:.5em;
+      
+      width:@icon-width;
+      
+      background-color:@white;
+      float:left;
+      margin-right:@icon-width / 6;
+    }
+    
+    // Info
+    .ii_contact-info {
+      height:@icon-width - .5em;
+      float:left;
+      line-height:1em;
+      padding:.5em .75em 0 .75em;
+      
+      background-color:@white;
+            
+    }
+    
+    
+    
+  }
+
+
+}
+
+.ii_contact-link {
+  color:@black;
+  
+  &:hover .ii_contact-icon {
+  
+  }
+}
+
+
+     
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+// Always show the scroll bar (eliminate jumping page content)
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color:@black;
+
+}

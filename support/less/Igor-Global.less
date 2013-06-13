@@ -1,0 +1,48 @@
+/*!
+ * Igor-Global.less
+ *
+ * Igor Institute Master LESS Stylesheet
+ * Built on Bootstrap v3.0.0 (2013-06-05)
+ *
+ */
+ 
+// Import base Bootstrap variables & mixins
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+
+// Import Igor variables & mixins
+@import "Igor-Variables.less";
+//@import "Igor-Mixins.less";
+
+// Import base Bootstrap
+@import "bootstrap/bootstrap.less";
+
+// Import font awesome
+@import "../fonts/font-awesome/less/font-awesome.less";
+
+
+
+// Import Igor section styles
+@import "Igor-Header.less";
+@import "Igor-Page.less";
+
+@import "Igor-Home.less";
+
+
+
+
+// -----------------------------------------------------------
+// SLOPPY RESETS
+
+// Always show the scroll bar (eliminate jumping page content)
+body {
+  overflow-y: scroll;
+
+}
+
+// Eliminate dotted borders on links & buttons
+a:focus, button:focus {
+  outline:none;
+}
+
+@import "Igor-Responsive.less";

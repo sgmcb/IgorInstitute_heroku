@@ -1,0 +1,212 @@
+/*!
+ * Igor-Header.less
+ *
+ * Igor Institute Header LESS Stylesheet
+ * Built on Bootstrap v3.0.0 (2013-06-05)
+ *
+ */
+
+
+// HEADER VARIABLES
+
+// Menu and dropdown vertical sizing
+@ul-v-margin:      .5em;
+@li-v-padding:     .75em;
+@li-lineheight:     1em;
+@lang-dropdown-height:   @ul-v-margin + 2*@li-v-padding + @li-lineheight;
+
+
+// Menu horizontal sizing
+@li-h-margin:    1.25em;
+@li-h-right-push:   15em;
+@li-h-padding:    .75em;
+@lang-dropdown-width: 2.5em;
+
+
+// Navbar colors
+@navbar-link-color:         @dark-grey;
+@navbar-link-hover-color:   @dark-grey;
+
+
+// Inverted navbar colors
+@navbar-inverse-color:              @white;
+@navbar-inverse-link-color:         @dark-grey;
+@navbar-inverse-link-hover-color:   @dark-grey;
+
+
+
+//--------------------------------------------------------
+//--------------------------------------------------------
+// Bootstrap Navbar variables
+
+// Basics of a navbar
+// @navbar-height:                    33px;
+@navbar-color:                     @k75;
+@navbar-bg:                        transparent;
+@navbar-inverse-bg:                transparent;
+
+
+// Navbar link background colors
+@navbar-link-hover-bg:             @tint-grey;
+@navbar-link-click-bg:             @tint-grey;
+@navbar-link-active-bg:            @black;
+
+  // Inverse
+@navbar-inverse-link-hover-bg:     @grey;
+@navbar-inverse-click-hover-bg:     @grey;
+
+
+//--------------------------------------------------------
+//--------------------------------------------------------
+
+
+.ii_hdr {
+  color:@dark-grey;
+  margin-bottom:1.25*@lang-dropdown-height;
+}
+
+
+
+// Header Bar
+.ii_hdr-bar {
+  width:100%;
+  height:4px;
+  display:block;
+  
+  background-color:@grey;
+  
+}
+
+// Hdr Navbar
+.ii_hdr-navbar {
+  margin:0;
+  padding:0;
+}
+
+
+// Header Logo <h1> wrap
+.ii_hdr-logo-h1 {
+  margin:0;
+  
+  // Header logo
+  .ii_hdr-logo {
+    
+    // Logo hover
+    &:hover {
+      opacity:.75;
+    }
+    
+  }
+}
+
+
+// Responsive, collapsed header toggle button
+.ii_navbar-toggle {
+  width:100%;
+  
+  position:relative;
+  top:auto;
+  right:auto;
+
+  padding: @li-v-padding @li-h-padding;
+  border:0 none;
+  
+  .border-top-radius(0px);    // Remove this after buttons are styled
+  .border-bottom-radius(0px); // Remove this after buttons are styled
+  
+  line-height: @li-lineheight;
+  text-align:right;
+  color:@dark-grey;
+  font-weight:bold;
+
+
+  .ii_resp-menu-icon {
+    margin-left:.5*@li-h-padding;
+  }
+
+}
+
+
+
+//-- Navbar Link List
+
+// Menu items <ul> wrapper
+.ii_navbar-ul, .nav.navbar-nav.ii_navbar-ul {
+  margin-top: @ul-v-margin;
+  padding: 0;
+
+}
+
+
+// List item
+.navbar .nav > li {
+  margin-right: @li-h-margin;
+
+  
+  
+  // Navbar Link default (.navbar .nav > li > a)
+  & > a {
+    padding: @li-v-padding @li-h-padding;
+    
+    
+    text-align: right;
+    line-height: @li-lineheight;
+    font-weight:bold;
+    
+    // Menu link hover
+    &:hover {
+    }
+    
+    
+    // Menu link click
+    &:active {
+      background-color:@navbar-link-click-bg;
+      box-shadow: inset 0 0 3px 3px @light-grey;
+    }
+  }
+  
+  &.is {
+      // Current section default
+    & > a {
+      color:@black;
+    }
+    
+    // Current section menu link hover
+    & > a:hover {
+      background-color:transparent;
+      color:@dark-grey;
+    }
+       
+    // Current section menu link click
+    & > a:active {
+      color:@grey;
+      box-shadow:none;
+    }
+  }
+  
+  // See Igor-Responsive.less for current section styling on desktop
+
+}
+
+// Language Selection Dropdown Menu
+.ii_hdr-lang-dropdown {
+  height:@lang-dropdown-height;
+  width:@lang-dropdown-width;
+
+  background-color:@grey;
+  .border-top-radius(0px);    // Remove this after buttons are styled
+  .border-bottom-radius(0px); // Remove this after buttons are styled
+  
+  color: @white;
+}
+
+
+// --------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
+// Navbar inverted style
+
+
+
+  
+
+

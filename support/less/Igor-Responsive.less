@@ -1,0 +1,116 @@
+/*!
+ * Igor-Responsive.less
+ *
+ * Igor Institute Responsive LESS Stylesheet
+ * Built on Bootstrap v3.0.0 (2013-06-05)
+ *
+ * Styles placed here are for specific overwriting of existing styles, but applied ONLY at a specific size
+ *
+ */
+
+
+// -----------------------------------------------------------------
+// SMALL SCREEN ONLY
+@media (max-width: @screen-small-max) {
+
+  // Add a padding to page content
+  .ii_pg-content {
+    padding:0 @screen-edge-padding;
+  }
+  
+  // Ensure no padding on page content; we've got it elsewhere
+  body {
+    padding:0 0 0 0;
+  }
+  
+  // No background images for link list items on mobile
+  .navbar .nav > li.is {
+    background-image:none;
+    height:auto;
+  }
+  
+  
+}
+
+
+
+// -----------------------------------------------------------------
+// ANY SCREEN BIGGER THAN SMALL (I.E. MEDIUM & LARGE)
+@media (min-width: @screen-medium-min) {
+    
+  // Page content containers have no padding on non-mobile
+  .ii_pg-content {
+    padding:0;
+  }
+  
+
+  // Navbar Links, current section
+  .navbar .nav > li.is {
+    height:@lang-dropdown-height - .25em;
+    
+    background-image:url('../svg/ii-hdr_section-underline.svg');
+    background-repeat:no-repeat;
+    background-position:center bottom;
+    
+  }
+  
+}
+
+
+
+
+// -----------------------------------------------------------------
+// Medium- and Large-screen specific selectors
+
+// -----------------------------------------------------------------
+// MEDIUM SCREEN SIZE only
+@media (min-width: @screen-medium-min) and (max-width: @screen-medium-max) {
+  // 
+}
+
+// -----------------------------------------------------------------
+// LARGE SCREEN SIZE only
+@media (min-width: @screen-large-min) {
+
+}
+
+
+
+
+// -----------------------------------------------------------------
+// -----------------------------------------------------------------
+// Redefine Responsive Utility Classes to use renamed screen size selectors
+
+// Visibility utilities
+
+// Default is "Small" screen size
+.visible-sm   { display: block !important; }
+.visible-md   { display: none !important; }
+.visible-lg   { display: none !important; }
+
+.hidden-sm    { display: none !important; }
+.hidden-md    { display: block !important; }
+.hidden-lg    { display: block !important; }
+
+
+// "Medium" screen size
+@media (min-width: @screen-medium-min) and (max-width: @screen-medium-max) {
+  .visible-sm   { display: none !important; }
+  .visible-md   { display: block !important; }
+  .visible-lg   { display: none !important; }
+
+  .hidden-sm    { display: block !important; }
+  .hidden-md    { display: none !important; }
+  .hidden-lg    { display: block !important; }
+}
+
+// "Large" screen size
+@media (min-width: @screen-large-min) {
+  .visible-sm   { display: none !important; }
+  .visible-md   { display: none !important; }
+  .visible-lg   { display: block !important; }
+
+  .hidden-sm    { display: block !important; }
+  .hidden-md    { display: block !important; }
+  .hidden-lg    { display: none !important; }
+}
